@@ -1,0 +1,11 @@
+db1.url=jdbc:mysql:///springdb
+db1.userName=root
+db1.password=root
+
+db2.url=jdbc:oracle:thin:@localhost:1521:xe
+db2.userName=system
+db2.password=Admin
+
+db2.url=jdbc:postgres:thin:@localhost:3789:xe
+db2.userName=system
+db2.password=Tiger

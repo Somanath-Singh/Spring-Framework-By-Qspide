@@ -1,0 +1,59 @@
+package com.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import jakarta.servlet.ServletRequest;
+
+@Controller
+//@RequestMapping("/home-api")
+public class MyController {
+	
+	
+	@GetMapping("/")
+	public String defaultPage()
+	{
+		System.out.println("MyController.defaultPage()");
+		return "/.jsp";
+	}
+	
+	@RequestMapping(value="/show",method=RequestMethod.GET)
+	public void showHome()
+	{
+		System.out.println("MyController.showHome()");
+	}
+	
+	
+	@RequestMapping(value="/home",method=RequestMethod.GET)
+	public String showHomePage()
+	{
+		System.out.println("MyController.showHomePage()");
+		return"home.jsp";
+	}
+	
+	@GetMapping("/login")
+	public String showLoginPage()
+	{
+		System.out.println("MyController.showLoginPage()");
+		return"login.jsp";
+	}
+	
+	@PostMapping("/login")
+	public String processLoginPage( ServletRequest req)
+	{
+		System.out.println("MyController.processLoginPage()");
+		
+		String email = req.getParameter("name");
+		String password = req.getParameter("password");
+		
+		System.out.println(email +".........."+password);
+		
+		return"Index.jsp";
+	}
+	
+	
+
+}

@@ -1,0 +1,26 @@
+package com.IOCImplementation;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+import com.Interface.Car;
+
+@Component("benz")
+public class Benz implements Car {
+	
+	@Value("car.benz")
+	String cartype;
+
+	@Override
+	public void start() {
+		System.out.println("Start the "+cartype+" car");
+
+	}
+
+	@Override
+	public void stop() {
+		System.out.println("Stop the "+cartype+" car");
+
+	}
+
+}

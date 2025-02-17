@@ -1,0 +1,13 @@
+INDEX VERSION 1.134
+D:\ECLIPSE\Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2680427775.index
+\com.qspider\src\main\resources
+D:\ECLIPSE\Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\198072187.index
+\SpringMVC-Proj-01\src\main\resources
+D:\ECLIPSE\Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1481903359.index
+\SpringMVC-Proj-02\src\main\java
+D:\ECLIPSE\Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4162029671.index
+\SpringMVC-Proj01\src\main\resources
+D:\ECLIPSE\Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\629334608.index
+\SpringMVC-Proj01\src\main\java
+D:\ECLIPSE\Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3170393907.index
+\SpringMVC-Proj01\src\main\java

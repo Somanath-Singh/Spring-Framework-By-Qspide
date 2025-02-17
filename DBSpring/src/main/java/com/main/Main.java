@@ -1,0 +1,29 @@
+package com.main;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.ioc.DBDetails;
+import com.spring.MyConfig;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		//create the object of IOC container
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MyConfig.class);
+		
+		DBDetails db = context.getBean(DBDetails.class);
+		
+		MyConfig config = context.getBean(MyConfig.class);
+		
+		System.out.println(db);
+		
+		config.getEnviromentDbDetails();
+		
+		DBDetails db1 = context.getBean(DBDetails.class);
+		
+		System.out.println(db1.getUrl());
+		
+	}
+
+}

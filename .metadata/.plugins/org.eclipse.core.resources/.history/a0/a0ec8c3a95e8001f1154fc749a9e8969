@@ -1,0 +1,40 @@
+package com.main;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.ioc.EmployeeAnnotationBased;
+import com.ioc.EmployeeImplementsLifeCycle;
+import com.spring.MyConfig;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		//create the object of IOC container
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MyConfig.class);
+		
+		//start the ioc object
+		
+		//for annotation
+		EmployeeAnnotationBased emp1 = context.getBean(EmployeeAnnotationBased.class);
+		
+		System.out.println(emp1);
+		
+		System.out.println(emp1.getId());
+		
+		//for life cycle interface
+//		EmployeeImplementsLifeCycle emp2 = context.getBean(EmployeeImplementsLifeCycle.class);
+//		
+//		System.out.println(emp2);
+//		
+//		System.out.println(emp2.getId());
+		
+		//destroy the ioc object
+//		context.stop();
+		
+		System.out.println("Execution stop ");
+		
+
+	}
+
+}

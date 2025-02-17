@@ -1,0 +1,48 @@
+package com.ioc;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Component
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Employee {
+	
+	int id;
+	
+	public int getId() {
+		return id;
+	}
+
+	@Autowired
+	public void setId(@Value("1") int id) {
+		this.id = id;
+	}
+	
+	@PostConstruct
+	public void springstart()
+	{
+		System.out.println("Employee.springstart()");
+	}
+	
+	@PreDestroy
+	public void springstop()
+	{
+		System.out.println("Employee.springstop()");
+	}
+
+	@Override
+	public String toString() {
+		return "Test [id=" + id +"]";
+	}
+	
+
+}

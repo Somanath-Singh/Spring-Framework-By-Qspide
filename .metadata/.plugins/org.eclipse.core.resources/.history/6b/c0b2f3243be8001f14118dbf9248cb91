@@ -1,0 +1,3 @@
+db1.url=jdbc:mysql:///springdb
+db1.userName=root
+db1.password=root

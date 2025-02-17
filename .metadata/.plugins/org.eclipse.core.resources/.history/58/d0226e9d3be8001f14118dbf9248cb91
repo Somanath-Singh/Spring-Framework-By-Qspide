@@ -1,0 +1,51 @@
+package com.ioc;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+import lombok.ToString;
+
+
+@ToString
+@Component
+public class DBDetails {
+	
+	private String url;
+	
+	private String userName;
+	
+	private String password;
+	
+	@Autowired
+	@Value("db2.url")
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+	@Autowired
+	@Value("db2.userName")
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	@Autowired
+	@Value("db2.password")
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
+	
+	//constructor injection
+	@Autowired
+	public DBDetails(@Value("db1.url") String url, @Value("db1.userName") String userName,@Value("db1.password")  String password) {
+		
+		this.url = url;
+		this.userName = userName;
+		this.password = password;
+		
+	}
+	
+	
+
+}

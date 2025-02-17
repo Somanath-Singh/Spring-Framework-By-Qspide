@@ -1,0 +1,50 @@
+package com.ioc;
+
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.SmartLifecycle;
+import org.springframework.stereotype.Component;
+
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Component
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class EmployeeImplementsLifeCycle implements SmartLifecycle,DisposableBean {
+	
+	int id;
+	
+	public int getId() {
+		return id;
+	}
+
+	@Autowired
+	public void setId(@Value("1") int id) {
+		this.id = id;
+	}
+
+	@Override
+	public String toString() {
+		return "Test [id=" + id +"]";
+	}
+
+	@Override
+	public void start() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void destroy() throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+}

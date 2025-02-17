@@ -1,0 +1,30 @@
+package com.main;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.ioc.Employee;
+import com.spring.MyConfig;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		//create the object of IOC container
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MyConfig.class);
+		
+		//start the ioc object
+		Employee emp = context.getBean(Employee.class);
+		
+		System.out.println(emp);
+		
+		System.out.println(emp.getId());
+		
+		//destroy the ioc object
+		context.stop();
+		
+		System.out.println("Execution stop ");
+		
+
+	}
+
+}

@@ -1,0 +1,30 @@
+package com.spring;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+import com.ioc.DBDetails;
+
+/**
+ * Hello world!
+ *
+ */
+@Configuration
+@ComponentScan("com.ioc")
+public class MyConfig
+{
+	
+	@Bean
+	public DBDetails getTest()
+	{
+		return new DBDetails();
+	}
+	
+	@Bean
+	public String getString()
+	{
+		return "Somanath Singh";
+	}
+    
+}

@@ -1,0 +1,36 @@
+package com.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.nt.dto.RegisterDTO;
+
+import jakarta.servlet.http.HttpSession;
+
+@Controller
+public class HomeController {
+	
+	@GetMapping("/register")
+	public String showRegister() {
+		
+		System.out.println("HomeController.showRegister()");
+		
+		return "register.jsp";
+	}
+	
+	
+	@PostMapping("/register")
+	public String doRegister(RegisterDTO register,HttpSession session) {
+		
+		System.out.println("HomeController.doRegister()");
+		System.out.println(register.toString());
+		
+		//store the data to session
+		
+		session.setAttribute("data", register);
+		
+		return "formLogin.jsp";
+	}
+
+}

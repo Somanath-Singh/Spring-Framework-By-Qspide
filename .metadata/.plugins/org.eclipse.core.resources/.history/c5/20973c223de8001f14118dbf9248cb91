@@ -1,0 +1,22 @@
+package com.main;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.ioc.Employee;
+import com.spring.MyConfig;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		//create the object of IOC container
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MyConfig.class);
+		
+		Employee emp = context.getBean(Employee.class);
+		
+		System.out.println(emp);
+		
+
+	}
+
+}

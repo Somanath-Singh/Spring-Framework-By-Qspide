@@ -1,0 +1,8 @@
+car.bmw="BMW"
+car.audi="AUDI"
+car.benz="BENZ"
+
+
+db1.url=jdbc:mysql:///
+db1.userName=root
+db1.password=root

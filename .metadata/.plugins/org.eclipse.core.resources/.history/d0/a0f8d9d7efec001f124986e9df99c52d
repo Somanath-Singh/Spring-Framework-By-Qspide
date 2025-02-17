@@ -1,0 +1,20 @@
+package com.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.nt.dto.RegisterDTO;
+
+@Controller
+public class HomeController {
+	
+	@GetMapping("register")
+	public String getRegister(RegisterDTO register) {
+		
+		System.out.println("HomeController.getRegister()");
+		System.out.println(register.toString());
+		
+		return "login.jsp";
+	}
+
+}
