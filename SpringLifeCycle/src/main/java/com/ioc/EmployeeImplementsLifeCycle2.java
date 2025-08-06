@@ -1,0 +1,42 @@
+package com.ioc;
+
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Component
+@Data
+@NoArgsConstructor
+public class EmployeeImplementsLifeCycle2 implements InitializingBean, DisposableBean {
+
+	int id;
+
+	// constructor injection
+	@Autowired
+	public EmployeeImplementsLifeCycle2(@Value("2") int id) {
+		System.out.println("LifeCycle.LifeCycle() - constructor Injection");
+		this.id = id;
+	}
+
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		System.out.println("LifeCycle.afterPropertiesSet() - Start");
+	}
+
+	@Override
+	public void destroy() throws Exception {
+		System.out.println("LifeCycle.destroy() - Destroy");
+
+	}
+
+	@Override
+	public String toString() {
+		return "Test [id=" + id + "]";
+	}
+
+}
