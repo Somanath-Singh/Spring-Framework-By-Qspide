@@ -23,6 +23,17 @@ public class Main {
 		System.out.println(test1);
 		
 		//created the object using bean
+<<<<<<< HEAD
+=======
+		Test test2 = (Test)context.getBean("getTest");
+		
+		test2.setId(2);
+		test2.setName("Rupesh Ku Singh");
+		
+		System.out.println(test2);
+		
+		//created the object using bean
+>>>>>>> e1c4418 (commit the code)
 		String name = (String)context.getBean("getString");
 		
 		System.out.println(name);

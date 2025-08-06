@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="light" lang="en" xmlns:th="www.thymeLeaf.org" th:fragment="Layout(title,content,script)">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title th:replace="${title}">Insert title here</title>
+	<link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+	<link rel="stylesheet" data-th-href="@{'/css/output.css'}" />
+	<link rel="stylesheet" data-th-href="@{'/css/style.css'}" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+		integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<style>
+	</style>
+</head>
+
+<body class="h-screen w-full dark:bg-gray-900 bg-gray-200 dark:text-white">
+ 
+	<!-- Common Header -->
+	<!-- If user is Logged in -->
+	<div th:if="${loggedUser}">
+		<div th:replace="~{user/user_navbar :: user_navbar}"></div>
+
+	</div>
+	<!-- If user is not Logged in -->
+	<div th:unless="${loggedUser}">
+		<div th:replace="~{navbar :: navbar}"></div>
+	</div>
+	
+
+	<!-- Section Part -->
+	<div class="pl-4 pt-20">
+		<section th:replace="${content}"></section>
+	</div>
+
+
+	<!-- Common Footer -->
+	<!-- <footer>Code is run by Aleex</footer> -->
+
+	<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+	<script data-th-src="@{'/js/script.js'}"></script>
+	<th:block data-th-replace="${script}"></th:block>
+</body>
+
+</html>

@@ -18,7 +18,11 @@ public class DBDetails {
 
 	// constructor injection
 	@Autowired
+<<<<<<< HEAD
 	public DBDetails(@Value("${db1.url}") String url, @Value("${db1.userName}") String userName,
+=======
+	private DBDetails(@Value("${db1.url}") String url, @Value("${db1.userName}") String userName,
+>>>>>>> e1c4418 (commit the code)
 			@Value("${db1.password}") String password) {
 
 		System.out.println("DBDetails.DBDetails() - constructor Injection");
@@ -28,6 +32,21 @@ public class DBDetails {
 
 	}
 	
+<<<<<<< HEAD
+=======
+	//field injection
+	@Autowired
+	public void connectDataBase(@Value("${db3.url}") String url, @Value("${db3.userName}") String userName,
+			@Value("${db3.password}") String password) {
+		
+		System.out.println("DBDetails.connectDataBase() - field injection");
+		this.url = url;
+		this.userName = userName;
+		this.password = password;
+		
+	}
+	
+>>>>>>> e1c4418 (commit the code)
 	//setter injection
 
 	@Autowired
@@ -61,6 +80,7 @@ public class DBDetails {
 	}
 	
 	
+<<<<<<< HEAD
 	//field injection
 	@Autowired
 	public void connectDataBase(@Value("${db3.url}") String url, @Value("${db3.userName}") String userName,
@@ -72,5 +92,8 @@ public class DBDetails {
 		this.password = password;
 		
 	}
+=======
+
+>>>>>>> e1c4418 (commit the code)
 
 }

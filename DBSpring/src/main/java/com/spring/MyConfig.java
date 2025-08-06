@@ -9,7 +9,11 @@ import org.springframework.core.env.Environment;
 
 @Configuration
 @ComponentScan("com.ioc")
+<<<<<<< HEAD
 @PropertySource({"classpath:application.properties","Properties/message.properties"})
+=======
+@PropertySource({"application.properties","Properties/message.properties"})
+>>>>>>> e1c4418 (commit the code)
 public class MyConfig
 {
 	

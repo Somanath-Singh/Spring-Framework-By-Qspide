@@ -6,8 +6,13 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
+<<<<<<< HEAD
 <body>
 <h1 style="color:red;text-align:center;">Result Page</h1>
+=======
+<body align="center">
+<h1 style="color:red">Result Page</h1>
+>>>>>>> e1c4418 (commit the code)
 <a href="./login">Login Page</a>
 </body>
 </html>

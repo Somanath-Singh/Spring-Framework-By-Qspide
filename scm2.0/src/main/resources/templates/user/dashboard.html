@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeLeaf.org"
+	th:replace="~{base :: Layout(~{::title} , ~{::section}, ~{::script})}">
+
+<head>
+<title data-th-text="${loggedUser.name}+ ' | Dashboard'">Profile
+	Page</title>
+</head>
+
+<body>
+	<section>
+		<!-- Side Bar -->
+		<div th:if="${loggedUser}">
+			<div th:replace="~{user/user_sidebar :: user_sidebar}"></div>
+		</div>
+
+		<div class="sm:pl-64 pt-15">
+			<div class="flex justify-center flex-col items-center">
+				<h1 class="text-5xl">DashBoard Page</h1>
+				<a data-th-href="@{'/logout'}">Logout</a>
+			</div>
+		</div>
+	</section>
+	<script>
+		console.log("profile Page")
+	</script>
+</body>
+
+</html>

@@ -9,7 +9,11 @@ import com.Interface.Car;
 @Component
 public class Driver {
 
+<<<<<<< HEAD
 	@Qualifier("audi")
+=======
+	@Qualifier("benz")
+>>>>>>> e1c4418 (commit the code)
 	@Autowired
 	Car car;
 
